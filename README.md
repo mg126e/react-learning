@@ -17,12 +17,16 @@ npm install
 
 ### Available Scripts
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start the development server |
-| `npm test` | Run tests in watch mode |
-| `npm run typecheck` | Run the TypeScript compiler (type checking only) |
-| `npm run build` | Type check and build for production |
+| Command                | Description                                      |
+| ---------------------- | ------------------------------------------------ |
+| `npm run dev`          | Start the development server                     |
+| `npm test`             | Run tests in watch mode                          |
+| `npm run typecheck`    | Run the TypeScript compiler (type checking only) |
+| `npm run build`        | Type check and build for production              |
+| `npm run lint`         | Run ESLint                                       |
+| `npm run lint:css`     | Run Stylelint on CSS files                       |
+| `npm run format`       | Format all files with Prettier                   |
+| `npm run format:check` | Check formatting without writing changes         |
 
 ## Project Structure
 
@@ -49,13 +53,13 @@ tests/                        # Test files (provided, do not modify)
 
 Complete these in order. Each exercise builds on the previous one.
 
-| # | Topic | File to edit | Verify |
-|---|---|---|---|
-| 1 | Arrays & Objects | `src/utils/todoHelpers.ts` | `npm test -- tests/todoHelpers.test.ts` |
-| 2 | Strings & Callbacks | `src/utils/todoHelpers.ts` | `npm test -- tests/todoHelpers.test.ts` |
-| 3 | Promises & Async | `src/utils/todoHelpers.ts` | `npm test -- tests/todoHelpers.test.ts` |
-| 4 | React Hooks | `src/hooks/useTodos.ts` | `npm test -- tests/useTodos.test.tsx` |
-| 5 | CSS Modules | Components + `.module.css` files | `npm run dev` (visual) |
+| #   | Topic               | File to edit                     | Verify                                  |
+| --- | ------------------- | -------------------------------- | --------------------------------------- |
+| 1   | Arrays & Objects    | `src/utils/todoHelpers.ts`       | `npm test -- tests/todoHelpers.test.ts` |
+| 2   | Strings & Callbacks | `src/utils/todoHelpers.ts`       | `npm test -- tests/todoHelpers.test.ts` |
+| 3   | Promises & Async    | `src/utils/todoHelpers.ts`       | `npm test -- tests/todoHelpers.test.ts` |
+| 4   | React Hooks         | `src/hooks/useTodos.ts`          | `npm test -- tests/useTodos.test.tsx`   |
+| 5   | CSS Modules         | Components + `.module.css` files | `npm run dev` (visual)                  |
 
 Read the instructions in the `exercises/` folder for each one. The test files in `tests/` serve as the definitive spec — if you get stuck, reading the tests will show you exactly what's expected.
 
@@ -65,7 +69,9 @@ Read the instructions in the `exercises/` folder for each one. The test files in
 2. Implement the solution in the specified file
 3. Run the tests to verify your implementation
 4. Run `npm run typecheck` to make sure your types are correct
-5. Move to the next exercise
+5. Run `npm run lint` and `npm run lint:css` to check for code quality issues
+6. Run `npm run format` to auto-format your code
+7. Move to the next exercise
 
 ## Tips
 
