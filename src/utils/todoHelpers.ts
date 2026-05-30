@@ -41,6 +41,25 @@ export function getPendingTodos(todoList : Array<Todo>){
 }
 
 // Exercise 2: Strings & Callbacks
+
+export function filterTodos(todoList : Array<Todo>, predicate : (todo: Todo) => boolean){
+    return todoList.filter(predicate);
+}
+
+export function searchTodos(todoList : Array<Todo>, query : string ){
+    let newTodoList : Array<Todo> = todoList.filter((todo) => todo.title.toLowerCase().includes(query.toLowerCase()));
+    if (newTodoList.length < 1){
+        return todoList;
+    }
+    return newTodoList;
+}
+
+export function formatTodoTitle(titleString : string){
+    let newString = titleString.trimEnd().trimStart();
+    return newString.charAt(0).toUpperCase() + newString.slice(1);
+}
+
+
 // Exercise 3: Promises & Async
 //
 // Implement your utility functions here.
