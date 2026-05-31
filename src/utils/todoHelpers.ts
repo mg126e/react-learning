@@ -61,6 +61,22 @@ export function formatTodoTitle(titleString : string){
 
 
 // Exercise 3: Promises & Async
-//
-// Implement your utility functions here.
-// See the exercises/ folder for instructions and run `npm test` to verify.
+
+export function fakeFetchTodos(){
+    
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let todoList : Todo[] = [createTodo("do laundry"), createTodo("get grocceries"), createTodo("walk dogs")];
+            resolve(todoList);
+        }, 500);
+    });
+}
+
+export function fakeSaveTodo(todo : Todo){
+    
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(todo);
+        }, 500);
+    });
+}
