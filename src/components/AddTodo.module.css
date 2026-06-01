@@ -1,1 +1,26 @@
 /* Exercise 5: Style the AddTodo component */
+
+.addTodo{
+    display: flex;
+    gap: 25px;
+}
+
+.todoInput{
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    flex: 1;
+}
+
+.addTodoButton{
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    background-color: #bd92afec;
+    cursor: pointer;
+    color: #333;
+}
+
+.addTodoButton:hover{
+    background-color: #bd92afcc;
+}

@@ -1,7 +1,7 @@
 // Exercise 4: React Hooks
 
 import {addTodo as oldAddTodo, createTodo, removeTodo as oldRemoveTodo, toggleTodo as oldToggleTodo} from "../utils/todoHelpers.ts"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Todo {
   title: string;
@@ -13,10 +13,25 @@ interface Todo {
 
 export function useTodos(){
     const [todos, setTodos] = useState<Array<Todo>>([]);
+    useEffect(() => {
+      const storedTodos = localStorage.getItem("todos"); 
+      if (storedTodos) {
+        setTodos(JSON.parse(storedTodos));
+      }
+    }, []);
     
-    const addTodo = (name : string) => setTodos(prevTodos => oldAddTodo(prevTodos, createTodo(name)));
-    const removeTodo = (id : string) => setTodos(prevTodos => oldRemoveTodo(prevTodos, id));
-    const toggleTodo = (id : string) => setTodos(prevTodos => oldToggleTodo(prevTodos, id));
+    const addTodo = (name : string) => setTodos(prevTodos => {
+      localStorage.setItem("todos", JSON.stringify(oldAddTodo(prevTodos, createTodo(name))));
+      return oldAddTodo(prevTodos, createTodo(name)
+    )});
+    const removeTodo = (id : string) => setTodos(prevTodos => {
+      localStorage.setItem("todos", JSON.stringify(oldRemoveTodo(prevTodos, id)));
+      return oldRemoveTodo(prevTodos, id);
+    });
+    const toggleTodo = (id : string) => setTodos(prevTodos => {
+      localStorage.setItem("todos", JSON.stringify(oldToggleTodo(prevTodos, id)));
+      return oldToggleTodo(prevTodos, id);
+    });
     
     
     return {todos, addTodo, removeTodo, toggleTodo}
