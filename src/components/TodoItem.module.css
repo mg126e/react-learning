@@ -1,52 +1,52 @@
 /* Exercise 5: Style the TodoItem component */
 
-.item{
-    overflow: auto;
+.item {
+  overflow: auto;
 }
 
-.todoItem{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    border-radius: 8px;
-    color: #333;
-    font-size: 18px;
-    font-weight: 500;
-    border: 1px solid #49896F;
-    width: 100%;
-    box-sizing: border-box;
+.todoItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid #49896f;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.container{
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.removeTodoButton{
-    padding: 5px 10px;
-    border: none;
-    background-color: #89c893;
-    cursor: pointer;
-    color: #333;
+.removeTodoButton {
+  padding: 5px 10px;
+  border: none;
+  background-color: #89c893;
+  cursor: pointer;
+  color: #333;
 }
 
-.img{
-    width: 25px;
-    height: 25px;
+.img {
+  width: 25px;
+  height: 25px;
 }
 
-.toggleTodoButton{
-    padding: 10px 15px;
-    border-radius: 12px;
-    border: none;
-    background-color: #49896F;
-    cursor: pointer;
-    color: rgb(230, 233, 230);
+.toggleTodoButton {
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: none;
+  background-color: #49896f;
+  cursor: pointer;
+  color: rgb(230, 233, 230);
 }
 
-.completed{
-    text-decoration: line-through;
-    color: #3333336f;
+.completed {
+  text-decoration: line-through;
+  color: #3333336f;
 }

@@ -1,9 +1,9 @@
 /* Exercise 5: Style the TodoList component */
 
-.todoList{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    height: 100%;
-    width: 100%;
+.todoList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+  width: 100%;
 }

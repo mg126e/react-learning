@@ -6,7 +6,20 @@
 import styles from "./TodoList.module.css";
 import { TodoItem } from "./TodoItem";
 
-export function TodoList({todos, removeTodo, toggleTodo} : {todos: Array<{title: string, id: string, completed: boolean, createdAt: Date}>, removeTodo: (id : string) => void, toggleTodo: (id : string) => void}) {
+export function TodoList({
+  todos,
+  removeTodo,
+  toggleTodo,
+}: {
+  todos: Array<{
+    title: string;
+    id: string;
+    completed: boolean;
+    createdAt: Date;
+  }>;
+  removeTodo: (id: string) => void;
+  toggleTodo: (id: string) => void;
+}) {
   return (
     <div className={styles.todoList}>
       {todos.map((todo) => (

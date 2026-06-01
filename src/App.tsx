@@ -9,7 +9,7 @@ export function App() {
   const { todos, addTodo, removeTodo, toggleTodo } = useTodos();
   const [showPendingOnly, setShowPendingOnly] = useState(false);
   const displayedTodos = showPendingOnly ? getPendingTodos(todos) : todos;
-  
+
   return (
     <div className={styles.container}>
       <div className={styles.app}>
@@ -22,7 +22,11 @@ export function App() {
         >
           {showPendingOnly ? "Show All Todos" : "Show Uncompleted Todos"}
         </button>
-        <TodoList todos={displayedTodos} removeTodo={removeTodo} toggleTodo={toggleTodo} />
+        <TodoList
+          todos={displayedTodos}
+          removeTodo={removeTodo}
+          toggleTodo={toggleTodo}
+        />
       </div>
     </div>
   );
